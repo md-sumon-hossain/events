@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\event\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+#newsletter
+Route::get('/',[NewsletterController::class,'index'])->name('website.index');
+Route::post('/',[NewsletterController::class,'subscribe'])->name('website.subscribe');

@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 #newsletter
-Route::get('/',[NewsletterController::class,'index'])->name('website.index');
-Route::post('/',[NewsletterController::class,'subscribe'])->name('website.subscribe');
+Route::get('/index',[NewsletterController::class,'index'])->name('website.index');
+Route::post('/index',[NewsletterController::class,'subscribe'])->name('website.subscribe');

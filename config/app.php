@@ -95,6 +95,7 @@ return [
     |
     */
 
+    
     'fallback_locale' => 'en',
 
     /*
@@ -193,5 +194,20 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available locales
+    |--------------------------------------------------------------------------
+    |
+    | List all locales that your application works with
+    |
+    */
+    // 'available_locales' => [
+    //     'English' => 'en',
+    //     'Russian' => 'ru',
+    //     'French' => 'fr',
+    // ],
+
 
 ];

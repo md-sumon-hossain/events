@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\event\NewsletterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\event\QueueJobController;
+use App\Http\Controllers\event\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,8 @@ Route::get('/', function () {
 #newsletter
 Route::get('/index',[NewsletterController::class,'index'])->name('website.index');
 Route::post('/index',[NewsletterController::class,'subscribe'])->name('website.subscribe');
+
+
+
+#queues and jobs 
+Route::get('jobs',[QueueJobController::class,'jobs'])->name('queue.job');
